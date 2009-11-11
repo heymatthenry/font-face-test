@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <title>Font Face Support</title>
+
+  <style type="text/css" media="screen">
+
+  </style>
+
+</head>
+<body>
+  <h1>Webfont format support</h1>
+  <div class="testCase">
+    <h2>Control</h2>
+    <span id="control" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>Embedded Open Type (EOT)</h2>
+    <span id="EOT" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>TrueType (TTF)</h2>
+    <span id="TTF" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>OpenType (OTF)</h2>
+    <span id="OTF" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>Web Open Font Format (WOFF)</h2>
+    <span id="WOFF" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>Scalable Vector Grahpics (SVG)</h2>
+    <span id="SVG" class="testCase">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>Cufon</h2>
+    <span id="Cufon">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+
+  <div class="testCase">
+    <h2>sIFR</h2>
+    <span id="sIFR">The quick brown fox jumped over the lazy dog.</span>
+  </div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="sifr.js"></script>
+<script type="text/javascript" src="cufon.js"></script>
+<script type="text/javascript" src="ChunkFive/ChunkFive-Cufon_400.font.js"></script>
+<script type="text/javascript">
+  // Do the unsexy JS font replacement
+  Cufon.replace('#Cufon');
+  sIFR.replaceElement("#sIFR", named({sFlashSrc: "./ChunkFive/sifr.swf", sColor: "#000"}));  
+</script>
+<script type="text/javascript" src="tests.js"></script>
+</html>

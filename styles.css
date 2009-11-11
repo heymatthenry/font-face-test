@@ -1,0 +1,97 @@
+h1, h2, .legend {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, Sans-Serif;
+}
+
+h2, p { margin: 0; }
+
+dl, dd, dt { width: auto; }
+dd { position: absolute; }
+
+@font-face {
+	  font-family: 'ChunkFive EOT';
+	  src: url('ChunkFive/Chunkfive.eot');
+}
+
+@font-face {
+	  font-family: 'ChunkFive TTF';
+	  src: url('ChunkFive/Chunkfive.ttf') format('truetype');
+}
+
+@font-face {
+	  font-family: 'ChunkFive OTF';
+	  src: url('ChunkFive/Chunkfive.otf') format('opentype');
+}
+
+@font-face {
+	  font-family: 'ChunkFive WOFF';
+	  src: url('ChunkFive/Chunkfive.woff') format('woff');
+}
+
+@font-face {
+	  font-family: 'ChunkFive SVG';
+    src: url('ChunkFive/Chunkfive.svg#ChunkFive') format('svg'); 
+}
+
+@font-face {
+  font-family: 'ChunkFive Bulletproof';
+  src: url('Chunkfive/Chunkfive.eot');
+  /* Using a local version kind of defeats the purpose of these tests
+    src: local('ChunkFive Regular'), local('ChunkFive Regular'),*/
+  src:  url("ChunkFive/Chunkfive.woff") format("woff"),
+    url("ChunkFive/Chunkfive.otf") format("opentype"),
+    url("ChunkFive/Chunkfive.svg#ChunkFive") format("svg");
+}
+
+#EOT { font-family: "ChunkFive EOT"; }
+#TTF { font-family: "ChunkFive TTF"; }
+#OTF { font-family: "ChunkFive OTF"; }
+#WOFF { font-family: "ChunkFive WOFF"; }
+#SVG { font-family: "ChunkFive SVG"; }
+#bulletproof { font-family: "ChunkFive Bulletproof"; }
+
+.pass {
+    background-color: #92FF9D;
+    border: 3px solid #38CC47;
+    border-right: 6px solid #38CC47;
+}
+
+.fail {
+    background-color: #FF4C53;
+    border: 3px solid #CC0008;
+    border-right: 6px solid #CC0008;
+}
+
+.NA {
+    background-color: #fff;
+    border: none;
+}
+
+/* These are standard sIFR styles... do not modify */
+
+.sIFR-flash {
+	  visibility: visible !important;
+	  margin: 0;
+}
+
+.sIFR-replaced {
+	  visibility: visible !important;
+}
+
+span.sIFR-alternate {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 0;
+	  height: 0;
+	  display: block;
+	  overflow: hidden;
+}
+
+/* Hide Adblock Object tab: the text should show up just fine, not poorly with a tab laid over it. */
+.sIFR-flash + div[adblocktab=true] {
+    display: none !important;
+}
+
+.sIFR-hasFlash #sIFR {
+	  visibility: hidden;
+}
